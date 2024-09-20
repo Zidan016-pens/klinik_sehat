@@ -14,7 +14,7 @@ async function seleksi() {
         console.log("berhasil konek db abangku");
         test.release();
     }catch(e){
-        console.log("ada error bosku :", e)
+        console.log("ada error boskuu :", e)
     }
 }
 
