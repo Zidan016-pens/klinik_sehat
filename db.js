@@ -5,7 +5,7 @@ const konekDB = mysql.createPool({
     port : 3307,
     user : 'zidanih',
     password : 'paswd03',
-    database : 'klinik_sehat'
+    database : 'klinik_sehat2'
 })
 
 async function seleksi() {
