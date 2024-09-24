@@ -1,13 +1,15 @@
 const mysql = require('mysql2/promise.js');
 
 const konekDB = mysql.createPool({
-    host : '139.228.64.11',
+    host : '192.168.11.91',
     port : 3307,
     user : 'zidanih',
     password : 'paswd03',
     database : 'klinik_sehat2'
 })
 
+//halo mbak cobak ketik apa gitu wkwk 
+//oke berati bisa bagi tugas ya mbak?
 async function seleksi() {
     try{
         const test = await konekDB.getConnection();
