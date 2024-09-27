@@ -1,7 +1,7 @@
 const mysql = require('mysql2/promise.js');
 
 const konekDB = mysql.createPool({
-    host : '192.168.11.91',
+    host : 'localhost',
     port : 3307,
     user : 'zidanih',
     password : 'paswd03',

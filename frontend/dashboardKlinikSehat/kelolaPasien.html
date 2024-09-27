@@ -23,6 +23,7 @@
 </head>
 
 <body id="page-top">
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -40,7 +41,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
-                    <span>Dashboard</span></a>
+                    <span>Periksa Pasien</span></a>
             </li>
 
             <li class="nav-item">
@@ -50,23 +51,24 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="kolestrol.html">Kolestrol</a>
-                        <a class="collapse-item" href="jantung.html">Jantung</a>
+                      <a class="collapse-item" href="riwayatPemeriksaan.html">Riwayat Pemeriksaan</a>
+                      <a class="collapse-item" href="pasienSehat.html">Data Pasien Sehat</a>
+                      <a class="collapse-item" href="pasienSakit.html">Data Pasien Sakit</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="menuPasien.html">
-                    <span>Menu Pasien</span>
+                <a class="nav-link" href="kelolaPasien.html">
+                    <span>Kelola Data Pasien</span>
                 </a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="user.html">
-                    <span>User</span>
+                    <span>Data User</span>
                 </a>
             </li>
 
@@ -139,59 +141,28 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data User</h1>
-                        
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal1">
-                          Tambah Data User
-                        </button>
-                        <!-- Modal 1-->
-                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel1">Tambah Data User</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <form>
-                                  <div class="form-group">
-                                    <label for="username">Username</label>
-                                    <input type="text" class="form-control" id="username">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" class="form-control" id="password">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="roleUSer">Jenis Role</label>
-                                    <select class="form-control" id="roleUSer">
-                                      <option>Admin</option>
-                                      <option>Petugas</option>
-                                    </select>
-                                  </div>
-                                  <button type="submit" class="btn btn-block btn-primary" id="tambahUser">Tambah User</button>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <h1 class="h3 mb-0 text-gray-800">Kelola Data Pasien</h1>
                     </div>
+
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
-                                            <th>Username</th>
-                                            <th>Role</th>
-                                            <th>Aksi</th>
-                                        </tr>
+                                      <tr>
+                                        <th>Nama Pasien</th>
+                                        <th>Foto</th>
+                                        <th>Keluhan</th>
+                                        <th>Diagnosa Penyakit</th>
+                                        <th>Tanggal Periksa</th>
+                                        <th>Resep</th>
+                                        <th>Hasil Pemeriksaan</th>
+                                        <th>Harga</th>
+                                        <th>Aksi</th>
+                                      </tr>
                                     </thead>
-                                    <tbody id="tabel">
+                                    <tbody id="tabelPasien">
                                     </tbody>
                                 </table>
                             </div>
@@ -203,7 +174,7 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel2">Edit Data User</h5>
+                              <h5 class="modal-title" id="exampleModalLabel2">Edit Data Pasien</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -211,21 +182,53 @@
                             <div class="modal-body">
                               <form>
                                 <div class="form-group">
-                                  <label for="userID">Username</label>
-                                  <input type="text" class="form-control" id="userID">
+                                  <label for="namaPasien">Nama Pasien</label>
+                                  <input type="text" class="form-control" id="namaPasien">
                                 </div>
                                 <div class="form-group">
-                                  <label for="passID">Password</label>
-                                  <input type="password" class="form-control" id="passID">
+                                  <label for="keluhan">Keluhan</label>
+                                  <textarea class="form-control" id="keluhan" rows="3"></textarea>
                                 </div>
                                 <div class="form-group">
-                                  <label for="jenisRole">Jenis Role</label>
-                                  <select class="form-control" id="jenisRole">
-                                    <option>Admin</option>
-                                    <option>Petugas</option>
+                                  <label for="resepPemeriksaan">Resep Pemeriksaan</label>
+                                  <textarea class="form-control" id="resepPemeriksaan" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hasilPemeriksaan">Hasil Pemeriksaan</label>
+                                    <textarea class="form-control" id="hasilPemeriksaan" rows="3"></textarea>
+                                  </div>
+                                <div class="form-group">
+                                  <label for="foto">Foto</label>
+                                  <input type="file" class="form-control-file" id="foto">
+                                </div>
+                                <div class="form-group">
+                                  <label for="diagnosa">Diagnosa</label>
+                                  <select class="form-control" id="diagnosa">
+                                    <option>Mencret</option>
+                                    <option>Mual</option>
+                                    <option>Pusing</option>
+                                    <option>Hamil</option>
+                                    <option>Pingsan</option>
                                   </select>
                                 </div>
-                                <button class="btn btn-block btn-primary" id="editUser">Edit User</button>
+                                <!-- <div class="form-group">
+                                  <label for="diagnosa" id="jenisP">Jenis Pasien</label><br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="bpjs" value="option1">
+                                        <label class="form-check-label" for="bpjs">BPJS</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="pasienUmum" value="option2">
+                                        <label class="form-check-label" for="pasienUmum">Pasien Umum</label>
+                                      </div>
+                                </div> -->
+                                <fieldset >
+                                  <div class="form-group">
+                                    <label for="disabledTextInput">Harga</label>
+                                    <input type="text" id="harga" class="form-control">
+                                  </div>
+                                </fieldset>
+                                <button type="submit" class="btn btn-block btn-warning" id="editPasien">Edit Pasien</button>
                               </form>
                             </div>
                           </div>
@@ -279,7 +282,9 @@
         </div>
     </div>
 
-    <script src="user.js"></script>
+
+    <script src="kelolaP.js"></script>
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

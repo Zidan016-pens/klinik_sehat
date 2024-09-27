@@ -20,9 +20,6 @@
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -44,7 +41,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
-                    <span>Dashboard</span></a>
+                    <span>Periksa Pasien</span></a>
             </li>
 
             <li class="nav-item">
@@ -54,23 +51,24 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="kolestrol.html">Kolestrol</a>
-                        <a class="collapse-item" href="jantung.html">Jantung</a>
+                      <a class="collapse-item" href="riwayatPemeriksaan.html">Riwayat Pemeriksaan</a>
+                      <a class="collapse-item" href="pasienSehat.html">Data Pasien Sehat</a>
+                      <a class="collapse-item" href="pasienSakit.html">Data Pasien Sakit</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="menuPasien.html">
-                    <span>Menu Pasien</span>
+                <a class="nav-link" href="kelolaPasien.html">
+                    <span>Kelola Data Pasien</span>
                 </a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="user.html">
-                    <span>User</span>
+                    <span>Data User</span>
                 </a>
             </li>
 
@@ -143,107 +141,65 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Data Pasien Kolestrol</h1>
-
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">
-                          Tambah Data Pasien
-                        </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Pasien</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <form>
-                                  <div class="form-group">
-                                    <label for="namaPasien">Nama Pasien</label>
-                                    <input type="text" class="form-control" id="namaPasien">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="keluhan">Keluhan</label>
-                                    <textarea class="form-control" id="keluhan" rows="3"></textarea>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="foto">Foto</label>
-                                    <input type="file" class="form-control-file" id="foto">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="diagnosa">Diagnosa</label>
-                                    <select class="form-control" id="diagnosa">
-                                      <option>Mencret</option>
-                                      <option>Mual</option>
-                                      <option>Pusing</option>
-                                      <option>Hamil</option>
-                                      <option>Pingsan</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="diagnosa">Jenis Pasien</label><br>
-                                        <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="exampleRadios" id="bpjs" value="option1">
-                                          <label class="form-check-label" for="bpjs">BPJS</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="exampleRadios" id="pasienUmum" value="option2">
-                                          <label class="form-check-label" for="pasienUmum">Pasien Umum</label>
-                                        </div>
-                                  </div>
-                                  <fieldset disabled>
-                                    <div class="form-group">
-                                      <label for="disabledTextInput">Total Pembayaran</label>
-                                      <input type="text" id="disabledTextInput" class="form-control" placeholder="Rp. 50.000">
-                                    </div>
-                                  </fieldset>
-                                  <button type="submit" class="btn btn-block btn-primary">Tambah Pasien</button>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <h1 class="h3 mb-0 text-gray-800">Riwayat Pemeriksaan</h1>
                     </div>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Nama Pasien</th>
-                                            <th>Keluhan</th>
-                                            <th>Foto</th>
-                                            <th>Diagnosa</th>
-                                            <th>Resep & Hasil Pemeriksaan</th>
-                                            <th>Tanggal periksa</th>
-                                            <th>Jenis Pasien</th>
-                                            <th>Total Pembayaran</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>foto</td>
-                                            <td>Maag</td>
-                                            <td>Maag</td>
-                                            <td>Belum selesai</td>
-                                            <td>28/34/343</td>
-                                            <td>BPJS</td>
-                                            <td>$320,800</td>
-                                            <td>Edit | Delete</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                      <div class="card-body">
+                          <div class="table-responsive">
+                              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                  <thead>
+                                      <tr>
+                                          <th>Nama Pasien</th>
+                                          <th>Jenis Pasien</th>
+                                          <th>Keluhan</th>
+                                          <th>Diagnosa Penyakit</th>
+                                          <th>Hasil Pemeriksaan</th>
+                                          <th>Total Pembayaran</th>
+                                          <th>Status</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody id="tabelRiwayat">
+                                      <!-- <tr>
+                                          <td>Tiger Nixon</td>
+                                          <td>BPJS</td>
+                                          <td>foto1</td>
+                                          <td>Perut Sakit</td>
+                                          <td>Mencret (Rp. 50.000)</td>
+                                          <td>23/23/24</td>
+                                          <td>Vitamin C</td>
+                                          <td>Sakit</td>
+                                          <td>Rp. 50.000</td>
+                                          <td>Rp. 250.000</td>
+                                          <td>
+                                              <button type="button" class="btn btn-sm btn-secondary disabled">
+                                              Telah Diperiksa
+                                              </button>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>Tiger Wolf</td>
+                                          <td>BPJS</td>
+                                          <td>foto1</td>
+                                          <td>Perut Sakit</td>
+                                          <td>Mencret (Rp. 50.000)</td>
+                                          <td>23/23/24</td>
+                                          <td>Vitamin C</td>
+                                          <td>Sakit</td>
+                                          <td>Rp. 50.000</td>
+                                          <td>Rp. 250.000</td>
+                                          <td>
+                                              <button type="button" class="btn btn-sm btn-secondary disabled">
+                                              Telah Diperiksa
+                                              </button>
+                                          </td>
+                                      </tr> -->
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -292,6 +248,7 @@
         </div>
     </div>
 
+    <script src="pemeriksaan.js"></script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -301,13 +258,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
